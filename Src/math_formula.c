@@ -38,7 +38,7 @@ void Generate_LUT(uint16_t *lut, uint16_t lut_points, uint16_t max_val){
  * 			@arg outMax	: maximum output value
  * */
 static uint16_t LinearInterp(uint16_t x, uint16_t inMin, uint16_t inMax, uint16_t outMin, uint16_t outMax){
-	return outMax + ((x - inMin) * (outMax - outMin) / (inMax - inMin));
+	return (uint16_t) (outMax + ((x - inMin) * (outMax - outMin) / (inMax - inMin)));
 }
 
 /*
