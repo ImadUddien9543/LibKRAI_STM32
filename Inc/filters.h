@@ -24,7 +24,7 @@ typedef struct {
 	uint32_t start_time, last_time, delta_time, sample_time;
 } Filter_t;
 
-void init_LowPass(filter *f, float alpha, float beta, float sample_time);
+void init_LowPass(filter *f, float alpha, float sample_time);
 float get_LowPass(filter *f, float input);
 
 #ifdef __cplusplus
