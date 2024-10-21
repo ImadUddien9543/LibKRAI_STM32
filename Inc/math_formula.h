@@ -23,6 +23,7 @@ extern "C" {
 
 #define LUT_POINTS 512
 
+/* Linear Interpolation with LUT variables*/
 extern uint16_t LUT_10_BIT[LUT_POINTS];
 extern uint16_t LUT_12_BIT[LUT_POINTS];
 extern uint16_t LUT_16_BIT[LUT_POINTS];
