@@ -13,7 +13,7 @@ const uint16_t Max_16_bitVal = 65535;
 
 static uint16_t LinearInterp(uint16_t x, uint16_t inMin, uint16_t inMax, uint16_t outMin, uint16_t outMax);
 /*
- *  @brief	: Function to help generate LUT points.
+ *  	@brief	: Function to help generate LUT points.
  * 	@note	: Call this function in int main() before while-loop.
  * 	@param	:
  * 			@arg *arr		: Blank array to be generated with LUT
@@ -28,7 +28,7 @@ void Generate_LUT(uint16_t *lut, uint16_t lut_points, uint16_t max_val){
 }
 
 /*
- *  @brief	: Linear interpolation static function.
+ *  	@brief	: Linear interpolation static function.
  * 	@note	: To help interpolate values when LinearInterpLUT() is called.
  * 	@param	:
  * 			@arg x		: input value
@@ -42,7 +42,7 @@ static uint16_t LinearInterp(uint16_t x, uint16_t inMin, uint16_t inMax, uint16_
 }
 
 /*
- *  @brief	: A linear interpolation using LUT for better processing speed
+ *  	@brief	: A linear interpolation using LUT for better processing speed
  * 	@note	: make sure the arguments are in uint16_t. Mostly used in peripherals
  * 	@param	:
  * 			@arg inputVal		: input value
