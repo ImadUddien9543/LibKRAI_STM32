@@ -20,7 +20,7 @@ float low_pass(filter *f, float input){
 	//dicoba kedua hasilnya
 	//	f->out = (f->alpha * input) + ((1.0f - f->alpha) * f->prev_out);
 	f->out = f->prev_out + (f->alpha * (input - f->prev_out));//code refactored ver
-	return f->out / 1.0f;
+	return f->out;
 }
 
 float hi_pass(filter *f, float input){
@@ -34,7 +34,7 @@ float hi_pass(filter *f, float input){
 	f->alpha = f->RC / (f->RC + f->dt) * 1.0f;
 	//	f->out = (f->alpha * f->prev_out) + (f->alpha * (input - f->prev_in));
 	f->out = f->alpha * (f->prev_out + input - f->prev_in);//code refactored ver
-	return f->out / 1.0f;
+	return f->out;
 }
 
 float exp_smoothing(filter *f, float input){
@@ -45,7 +45,7 @@ float exp_smoothing(filter *f, float input){
 		f->prev_out = f->out;
 		f->last = f->start;
 	}
-	return f->out / 1.0f;
+	return f->out;
 }
 
 float simple_mov_avg(filter *f, float input){
@@ -56,7 +56,7 @@ float simple_mov_avg(filter *f, float input){
 		f->prev_in = input;
 		f->last = f->start;
 	}
-	return f->out / 1.0f;
+	return f->out;
 }
 
 void alpha_beta_filter(filter *f, float input){
