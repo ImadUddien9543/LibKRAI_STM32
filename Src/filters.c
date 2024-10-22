@@ -9,11 +9,11 @@
 
 /*
  *  	@brief	: Function of low pass filter.
- *		@note	: call this function in int main() before while-loop
- *		@param	:
- * 			@arg *f				: filter_t instances
- * 			@arg alpha			: alpha constant of LPF in float
- *			@arg sample time	: sample time of LPF in uint32_t
+ *	@note	: call this function in int main() before while-loop
+ *	@param	:
+ * 		@arg *f				: filter_t instances
+ * 		@arg alpha			: alpha constant of LPF in float
+ *		@arg sample time	: sample time of LPF in uint32_t
  * */
 void init_LowPass(filter *f, float alpha, uint32_t sample_time){
 	f->alpha = alpha;
@@ -23,12 +23,11 @@ void init_LowPass(filter *f, float alpha, uint32_t sample_time){
 
 /*
  *  	@brief	: Function of low pass filter.
- *		@note	: this function returns low pass calculation in float.
- *		@param	:
- * 			@arg *f			: filter_t instances
- * 			@arg input		: input in float
+ *	@note	: this function returns low pass calculation in float.
+ *	@param	:
+ * 		@arg *f			: filter_t instances
+ * 		@arg input		: input in float
  * */
-
 float get_LowPass (filter *f, float input){
 	f->start_time = HAL_GetTick();
 	f->delta_time = f->start_time - f->last_time;
